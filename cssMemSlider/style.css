@@ -3,3 +3,95 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.wrapper {
+    background-color: darkgrey;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+
+.mask {
+    width: 80vw;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.content {
+display: flex;
+}
+
+.content img {
+    width: 100%;
+}
+
+.stimg {
+    margin-left: 0;
+}
+
+.fblock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation {
+    align-self: flex-end;
+}
+
+.navigation input {
+    padding: 2rem;
+}
+
+.radio-btn {
+    padding: 20px;
+    margin: 10px;
+}
+
+label {
+   display: none;
+}
+
+#r1:checked ~ .stimg {
+    margin-left: -200%;
+}
+
+#r2:checked ~ .stimg {
+    margin-left: -100%;
+}
+
+#r3:checked ~ .stimg {
+    margin-left: -200%;
+}
+
+#r4:checked ~ .stimg {
+    margin-left: -300%;
+}
+
+#r5:checked ~ .stimg {
+    margin-left: -400%;
+}
+
+
+
+
+#r1:checked ~ label {
+    display: block;
+}
