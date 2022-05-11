@@ -1,1 +1,0 @@
-Task: CSS Mem Slider
