@@ -5,7 +5,7 @@
 }
 
 .wrapper {
-    background-color: darkgrey;
+    background-color: #25282A;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -29,17 +29,19 @@
 }
 
 .mask {
-    width: 80vw;
+    width: min(80vw, 1920px);
     overflow: hidden;
     border-radius: 2rem;
 }
 
 .content {
 display: flex;
+transition: 1s;
 }
 
 .content img {
     width: 100%;
+    transition: 1s;
 }
 
 .stimg {
@@ -48,50 +50,121 @@ display: flex;
 
 .fblock {
     width: 100%;
+    height: 2rem;
     display: flex;
     justify-content: space-between;
 }
 
-.navigation {
-    align-self: flex-end;
-}
-
-.navigation input {
-    padding: 2rem;
-}
-
 .radio-btn {
-    padding: 20px;
-    margin: 10px;
+    display: none;
 }
 
-label {
-   display: none;
+/* Navigation */
+#r1:checked ~ .slider .mask .content .stimg {
+    margin-left: 0;
 }
 
-#r1:checked ~ .stimg {
-    margin-left: -200%;
-}
-
-#r2:checked ~ .stimg {
+#r2:checked ~ .slider .mask .content .stimg {
     margin-left: -100%;
 }
 
-#r3:checked ~ .stimg {
+#r3:checked ~ .slider .mask .content .stimg {
     margin-left: -200%;
 }
 
-#r4:checked ~ .stimg {
+#r4:checked ~ .slider .mask .content .stimg {
     margin-left: -300%;
 }
 
-#r5:checked ~ .stimg {
+#r5:checked ~ .slider .mask .content .stimg {
     margin-left: -400%;
 }
 
+.option-container {
+    display: flex;
+    justify-content: end;
+}
+
+.pseudo-option-container {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pseudo-option-container:hover .pseudo-option{
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.pseudo-option {
+    width: 1rem;
+    height: 1rem;
+    background-color: #71ABFE;
+    border-style: solid;
+    border-radius: 2rem;
+    border-color: #71ABFE;
+    border-width: 3px;
+}
 
 
+#r1:checked ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
+    background-color: transparent;
+}
 
-#r1:checked ~ label {
+#r2:checked ~ .slider .fblock .option-container label .pseudo-option-container .r2 {
+    background-color: transparent;
+}
+
+#r3:checked ~ .slider .fblock .option-container label .pseudo-option-container .r3 {
+    background-color: transparent;
+}
+
+#r4:checked ~ .slider .fblock .option-container label .pseudo-option-container .r4 {
+    background-color: transparent;
+}
+
+#r5:checked ~ .slider .fblock .option-container label .pseudo-option-container .r5 {
+    background-color: transparent;
+}
+
+#r1:active ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
+    background-color: red;
+}
+
+.text-container {
+    width: 60%;
+    height: 4rem;
+    overflow: hidden;
+}
+
+.text-mask {
+    display: flex;
+    width: 100%;
+    transition: 1s;
+}
+
+.text-item {
     display: block;
+    min-width: 100%;
+    color: antiquewhite;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#r1:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: 0;
+}
+#r2:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -100%;
+}
+#r3:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -200%;
+}
+#r4:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -300%;
+}
+#r5:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -400%;
 }
