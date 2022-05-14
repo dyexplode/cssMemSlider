@@ -29,9 +29,9 @@
 }
 /* need replace px*/
 .mask {
-    width: min(80vw, 120rem);
+    width: min(80vw, 120rem, calc(1.77 * (100vh - 8rem)));
     overflow: hidden;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .content {
@@ -49,7 +49,7 @@ transition: 1s;
 }
 
 .fblock {
-    width: min(80vw, 120rem);
+    width: min(80vw, 120rem, calc(1.77 * (100vh - 8rem)));
     display: flex;
     justify-content: space-between;
 }
@@ -93,7 +93,7 @@ transition: 1s;
 }
 
 .pseudo-option-container:hover {
-    cursor: pointer;
+    cursor: url("./assets/svg/cursor-pointer.svg") 16 7, pointer; 
 }
 
 .pseudo-option-container:hover .pseudo-option{
@@ -133,8 +133,24 @@ transition: 1s;
 }
 
 /*this switch cursor*/
-#r1:active ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
-    background-color: red;
+#r1:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r2:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r3:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r4:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r5:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
 }
 
 .text-container {
@@ -158,7 +174,7 @@ transition: 1s;
 
 /* this replace cursor */
 .text-item:active {
-    cursor: pointer;
+    cursor: url("./assets/svg/text-active-cursor.svg") 18 20, pointer;
 }
 
 #r1:checked ~ .slider .fblock .text-container .text-mask {
