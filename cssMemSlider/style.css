@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    background-color: #25282A;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+}
+/* need replace px*/
+.mask {
+    width: min(80vw, 120rem, calc(1.77 * (100vh - 8rem)));
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.content {
+width: 500%;
+display: flex;
+transition: 1s;
+overflow: hidden;
+}
+
+.content img {
+    width: 20%;
+    transition: 1s;
+}
+
+.stimg {
+    margin-left: 0;
+}
+
+.fblock {
+    width: min(80vw, 120rem, calc(1.77 * (100vh - 8rem)));
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-btn {
+    display: none;
+}
+
+/* Navigation */
+#r1:checked ~ .slider .mask .content .stimg {
+    margin-left: 0;
+}
+
+#r2:checked ~ .slider .mask .content .stimg {
+    margin-left: -20%;
+}
+
+#r3:checked ~ .slider .mask .content .stimg {
+    margin-left: -40%;
+}
+
+#r4:checked ~ .slider .mask .content .stimg {
+    margin-left: -60%;
+}
+
+#r5:checked ~ .slider .mask .content .stimg {
+    margin-left: -80%;
+}
+
+.option-container {
+    display: flex;
+    justify-content: end;
+}
+
+.pseudo-option-container {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pseudo-option-container:hover {
+    cursor: url("./assets/svg/cursor-pointer.svg") 16 7, pointer; 
+}
+
+.pseudo-option-container:hover .pseudo-option{
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.pseudo-option {
+    width: 1rem;
+    height: 1rem;
+    background-color: #71ABFE;
+    border-style: solid;
+    border-radius: 2rem;
+    border-color: #71ABFE;
+    border-width: 0.1875rem;
+}
+
+
+#r1:checked ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
+    background-color: transparent;
+}
+
+#r2:checked ~ .slider .fblock .option-container label .pseudo-option-container .r2 {
+    background-color: transparent;
+}
+
+#r3:checked ~ .slider .fblock .option-container label .pseudo-option-container .r3 {
+    background-color: transparent;
+}
+
+#r4:checked ~ .slider .fblock .option-container label .pseudo-option-container .r4 {
+    background-color: transparent;
+}
+
+#r5:checked ~ .slider .fblock .option-container label .pseudo-option-container .r5 {
+    background-color: transparent;
+}
+
+/*this switch cursor*/
+#r1:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r2:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r3:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r4:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r5:active ~ .slider .fblock .option-container label .pseudo-option-container {
+    cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
+}
+
+#r1:active ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
+    background-color: lightgrey;
+}
+
+#r2:active ~ .slider .fblock .option-container label .pseudo-option-container .r2 {
+    background-color: lightgrey;
+}
+
+#r3:active ~ .slider .fblock .option-container label .pseudo-option-container .r3 {
+    background-color: lightgrey;
+}
+
+#r4:active ~ .slider .fblock .option-container label .pseudo-option-container .r4 {
+    background-color: lightgrey;
+}
+
+#r5:active ~ .slider .fblock .option-container label .pseudo-option-container .r5 {
+    background-color: lightgrey;
+}
+
+.text-container {
+    width: 60%;
+    overflow: hidden;
+}
+
+.text-mask {
+    display: flex;
+    width: 100%;
+    transition: 1s;
+}
+
+.text-item {
+    display: block;
+    min-width: 100%;
+    color: antiquewhite;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* this replace cursor */
+.text-item:active {
+    cursor: url("./assets/svg/text-active-cursor.svg") 18 20, pointer;
+}
+
+#r1:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: 0;
+}
+#r2:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -100%;
+}
+#r3:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -200%;
+}
+#r4:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -300%;
+}
+#r5:checked ~ .slider .fblock .text-container .text-mask {
+    margin-left: -400%;
+}
+
+@media (max-width: 868px) {
+    .fblock {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    .text-container {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .text-item {
+        font-size: 1rem;
+    }
+}
