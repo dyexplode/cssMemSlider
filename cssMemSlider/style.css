@@ -153,6 +153,26 @@ transition: 1s;
     cursor: url("./assets/svg/cursor-active-pointer.svg") 16 7, pointer; 
 }
 
+#r1:active ~ .slider .fblock .option-container label .pseudo-option-container .r1 {
+    background-color: lightgrey;
+}
+
+#r2:active ~ .slider .fblock .option-container label .pseudo-option-container .r2 {
+    background-color: lightgrey;
+}
+
+#r3:active ~ .slider .fblock .option-container label .pseudo-option-container .r3 {
+    background-color: lightgrey;
+}
+
+#r4:active ~ .slider .fblock .option-container label .pseudo-option-container .r4 {
+    background-color: lightgrey;
+}
+
+#r5:active ~ .slider .fblock .option-container label .pseudo-option-container .r5 {
+    background-color: lightgrey;
+}
+
 .text-container {
     width: 60%;
     overflow: hidden;
