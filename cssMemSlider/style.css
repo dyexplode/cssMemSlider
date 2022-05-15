@@ -35,12 +35,14 @@
 }
 
 .content {
+width: 500%;
 display: flex;
 transition: 1s;
+overflow: hidden;
 }
 
 .content img {
-    width: 100%;
+    width: 20%;
     transition: 1s;
 }
 
@@ -64,19 +66,19 @@ transition: 1s;
 }
 
 #r2:checked ~ .slider .mask .content .stimg {
-    margin-left: -100%;
+    margin-left: -20%;
 }
 
 #r3:checked ~ .slider .mask .content .stimg {
-    margin-left: -200%;
+    margin-left: -40%;
 }
 
 #r4:checked ~ .slider .mask .content .stimg {
-    margin-left: -300%;
+    margin-left: -60%;
 }
 
 #r5:checked ~ .slider .mask .content .stimg {
-    margin-left: -400%;
+    margin-left: -80%;
 }
 
 .option-container {
